@@ -20,7 +20,7 @@ class CreatePenjualanTable extends Migration
             $table->unsignedbigInteger('shift_id');
             $table->unsignedbigInteger('layanan_id');
             $table->foreign('user_id')->references('id_user')->on('users')->onDelete('cascade');
-            $table->foreign('shift_id')->references('id_shift')->on('shift')->onDelete('cascade');
+            $table->foreign('shift_id')->references('id_shift')->on('Shift')->onDelete('cascade');
             $table->foreign('layanan_id')->references('id_layanan')->on('layanan')->onDelete('cascade');
             $table->string('plat_nomor');
             $table->string('jumlah');

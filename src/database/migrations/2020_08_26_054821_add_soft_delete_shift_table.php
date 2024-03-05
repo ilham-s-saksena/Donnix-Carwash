@@ -13,7 +13,7 @@ class AddSoftDeleteShiftTable extends Migration
      */
     public function up()
     {
-        Schema::table('shift', function (Blueprint $table) {
+        Schema::table('Shift', function (Blueprint $table) {
             $table->softDeletes();
         });
     }

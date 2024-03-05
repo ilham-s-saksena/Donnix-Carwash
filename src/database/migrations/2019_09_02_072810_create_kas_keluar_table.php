@@ -19,8 +19,8 @@ class CreateKasKeluarTable extends Migration
             $table->unsignedbigInteger('shift_id');
             $table->unsignedbigInteger('tagihan_id');
             $table->foreign('user_id')->references('id_user')->on('users')->onDelete('cascade');
-            $table->foreign('shift_id')->references('id_shift')->on('shift')->onDelete('cascade');
-            $table->foreign('tagihan_id')->references('id_tagihan')->on('tagihan')->onDelete('cascade');
+            $table->foreign('shift_id')->references('id_shift')->on('Shift')->onDelete('cascade');
+            $table->foreign('tagihan_id')->references('id_tagihan')->on('Tagihan')->onDelete('cascade');
             $table->integer('total');
             $table->text('keterangan');
             $table->timestamps();
